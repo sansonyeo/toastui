@@ -1,0 +1,25 @@
+{
+  "name": "toastui",
+  "version": "1.0.0",
+  "description": "sansonyeo toastui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sansonyeo/toastui.git"
+  },
+  "keywords": [
+    "sansonyeo"
+  ],
+  "author": "sansonyeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sansonyeo/toastui/issues"
+  },
+  "homepage": "https://github.com/sansonyeo/toastui#readme",
+  "dependencies": {
+    "tui-grid": "^4.21.22"
+  }
+}
