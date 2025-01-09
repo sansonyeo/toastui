@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>API FETCH EXAMPLE</h1><br />
+    <table id="container">
+        <tr>
+            <td>_id</td>
+            <td>제목</td>
+            <td>내용</td>
+            <td>작성자</td>
+            <td>작성일</td>
+        </tr>
+    </table>
+    <script>
+        fetch("http://121.167.154.99:8002/api/Boards")
+          .then((response) => response.json())
+          .then((data) => 
+            data.forEach(elem => {
+                document.querySelector("#container").innerHTML += `
+                    <tr>
+                        <td>${elem._id}</td>
+                        <td>${elem.제목}</td>
+                        <td>${elem.내용}</td>
+                        <td>${elem.작성자}</td>
+                        <td>${elem.작성일}</td>
+                    </tr>`;
+            }))
+          .catch((error) =>
+            document.querySelector("#container").innerHTML += `
+            <tr>
+                <td colspan="4">Error occurred.</td>
+            </tr>
+          `);
+    </script>
+</body>
+</html>
